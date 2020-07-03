@@ -56,6 +56,8 @@ log_message(enum ya_log_verbosity verb, const char *fmt, va_list args)
     vfprintf(output, fmt, args);
     fprintf(output, "%s\n", color_postfix);
 #endif
+
+    fflush(output);
 }
 
 void
